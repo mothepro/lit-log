@@ -6,18 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Lit Log Demo</title>
-  <script type="module" src="//unpkg.com/es-module-shims@0.4.6/dist/es-module-shims.min.js"></script>
   <script type="importmap-shim" src="import-map.json"></script>
   <!-- Production -->
+  <script prod-only type=prod-only-module" src="//unpkg.com/es-module-shims@0.4.6/dist/es-module-shims.min.js"></script>
   <script prod-only type=prod-only-module-shim src="//unpkg.com/lit-log/dist/esm/demo/index.js"></script>
   <!-- Development -->
+  <script dev-only type=module src="//unpkg.com/@mothepro/es-module-shims@0.0.0/dist/es-module-shims.min.js"></script>
   <script dev-only type=application/javascript src="//unpkg.com/typescript/lib/typescript.js"></script>
-  <script dev-only type=module src="//unpkg.com/@mothepro/ts-module-shim/dist/esm/index.js"></script>
   <script dev-only type=module-shim src="index.ts"></script>
 </head>
 
 <body>
-
+  <lit-log open entry="initial entry">
+    <span slot="summary">Logger for demo</span>
+    <demo-log-for-me></demo-log-for-me>
+  </lit-log>
 </body>
 
 </html>

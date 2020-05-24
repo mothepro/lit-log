@@ -14,6 +14,8 @@
 | Attribute | Type | Default | Description |
 | --------- | ---- | ------- | ----------- |
 | `hidden` | `boolean` | `false` | Whether the element should be displayed |
+| `open` | `boolean` | `false` | Whether the log should be shown by default |
+| `entry` | `any` | `undefined` | Adds a new entry |
 
 <!--
 Inline demo for webcomponents.org
@@ -35,5 +37,12 @@ Inline demo for webcomponents.org
 -->
 <script type="module" src="//unpkg.com/lit-log/dist/esm/index.js?module"></script>
 
-
+<lit-log
+  open
+  entry="first"
+>
+  <span slot="summary">Cool Logger</span>
+</lit-log>
 ```
+
+TODO add better log formats (Ideally it should be like `console.log`)
