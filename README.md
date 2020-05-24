@@ -45,4 +45,6 @@ Inline demo for webcomponents.org
 </lit-log>
 ```
 
-TODO add better log formats (Ideally it should be like `console.log`)
+TODO
+Add better log formats (Ideally it should be like `console.log`)
+Only log in dev
